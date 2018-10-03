@@ -1,0 +1,2257 @@
+{
+  "contractName": "ZetaProto",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_tokenHave",
+          "type": "string"
+        },
+        {
+          "name": "_tokenNeed",
+          "type": "string"
+        },
+        {
+          "name": "_quantity",
+          "type": "uint256"
+        }
+      ],
+      "name": "makeOrder",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5033600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555061044d806100616000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063de6d86f514610046575b600080fd5b6100f0600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001909291905050506100f2565b005b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555082600360008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000190805190602001906101a992919061037c565b5081600360008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600101908051906020019061022192919061037c565b5080600360008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018190555080600360008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600301819055506000600360008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060050160006101000a81548160ff0219169083600381111561037257fe5b0217905550505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103bd57805160ff19168380011785556103eb565b828001600101855582156103eb579182015b828111156103ea5782518255916020019190600101906103cf565b5b5090506103f891906103fc565b5090565b61041e91905b8082111561041a576000816000905550600101610402565b5090565b905600a165627a7a723058204dbc312e9a60cb2e5f1ca195cf848327b40c014ccdcd9813bb25653b161f67f20029",
+  "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063de6d86f514610046575b600080fd5b6100f0600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001909291905050506100f2565b005b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555082600360008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000190805190602001906101a992919061037c565b5081600360008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600101908051906020019061022192919061037c565b5080600360008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018190555080600360008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600301819055506000600360008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060050160006101000a81548160ff0219169083600381111561037257fe5b0217905550505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103bd57805160ff19168380011785556103eb565b828001600101855582156103eb579182015b828111156103ea5782518255916020019190600101906103cf565b5b5090506103f891906103fc565b5090565b61041e91905b8082111561041a576000816000905550600101610402565b5090565b905600a165627a7a723058204dbc312e9a60cb2e5f1ca195cf848327b40c014ccdcd9813bb25653b161f67f20029",
+  "sourceMap": "26:816:1:-;;;347:57;8:9:-1;5:2;;;30:1;27;20:12;5:2;347:57:1;387:10;379:5;;:18;;;;;;;;;;;;;;;;;;26:816;;;;;;",
+  "deployedSourceMap": "26:816:1:-;;;;;;;;;;;;;;;;;;;;;;;;457:383;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;566:10;558:5;;:18;;;;;;;;;;;;;;;;;;619:10;586:13;:20;600:5;;;;;;;;;;;586:20;;;;;;;;;;;;;;;:30;;:43;;;;;;;;;;;;:::i;:::-;;672:10;639:13;:20;653:5;;;;;;;;;;;639:20;;;;;;;;;;;;;;;:30;;:43;;;;;;;;;;;;:::i;:::-;;724:9;692:13;:20;706:5;;;;;;;;;;;692:20;;;;;;;;;;;;;;;:29;;:41;;;;772:9;743:13;:20;757:5;;;;;;;;;;;743:20;;;;;;;;;;;;;;;:26;;:38;;;;822:11;792:13;:20;806:5;;;;;;;;;;;792:20;;;;;;;;;;;;;;;:27;;;:41;;;;;;;;;;;;;;;;;;;;;;;;457:383;;;:::o;26:816::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.23;\n\ncontract ZetaProto {\n    \n    address maker;\n    address owner;\n    uint256 commission;\n\n    enum Status {open, closed, locked, canceled }\n\n    struct Order {\n        string tokenHave;\n        string tokenNeed;\n        uint256 quantity;\n        uint256 value;\n        uint256 timestamp;\n        Status status;\n    }\n\n    constructor () public {\n        owner = msg.sender;\n    }\n\n    mapping (address => Order) listed_orders;\n\n    function makeOrder(string _tokenHave, string _tokenNeed, uint256 _quantity) public payable {\n        maker = msg.sender;\n        listed_orders[maker].tokenHave = _tokenHave;\n        listed_orders[maker].tokenNeed = _tokenNeed;\n        listed_orders[maker].quantity = _quantity;\n        listed_orders[maker].value = _quantity ;\n        listed_orders[maker].status = Status.open;\n    }\n}",
+  "sourcePath": "/home/suraj333/COINSHIP/contracts/ZetaProto.sol",
+  "ast": {
+    "absolutePath": "/home/suraj333/COINSHIP/contracts/ZetaProto.sol",
+    "exportedSymbols": {
+      "ZetaProto": [
+        179
+      ]
+    },
+    "id": 180,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 90,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 179,
+        "linearizedBaseContracts": [
+          179
+        ],
+        "name": "ZetaProto",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 92,
+            "name": "maker",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "56:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 91,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "56:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 94,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "75:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 93,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "75:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 96,
+            "name": "commission",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "94:18:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 95,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "94:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "ZetaProto.Status",
+            "id": 101,
+            "members": [
+              {
+                "id": 97,
+                "name": "open",
+                "nodeType": "EnumValue",
+                "src": "132:4:1"
+              },
+              {
+                "id": 98,
+                "name": "closed",
+                "nodeType": "EnumValue",
+                "src": "138:6:1"
+              },
+              {
+                "id": 99,
+                "name": "locked",
+                "nodeType": "EnumValue",
+                "src": "146:6:1"
+              },
+              {
+                "id": 100,
+                "name": "canceled",
+                "nodeType": "EnumValue",
+                "src": "154:8:1"
+              }
+            ],
+            "name": "Status",
+            "nodeType": "EnumDefinition",
+            "src": "119:45:1"
+          },
+          {
+            "canonicalName": "ZetaProto.Order",
+            "id": 114,
+            "members": [
+              {
+                "constant": false,
+                "id": 103,
+                "name": "tokenHave",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "193:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 102,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "193:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 105,
+                "name": "tokenNeed",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "219:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 104,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "219:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 107,
+                "name": "quantity",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "245:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 106,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 109,
+                "name": "value",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "271:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 108,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "271:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 111,
+                "name": "timestamp",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "294:17:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 110,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "294:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 113,
+                "name": "status",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "321:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Status_$101",
+                  "typeString": "enum ZetaProto.Status"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 112,
+                  "name": "Status",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 101,
+                  "src": "321:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Status_$101",
+                    "typeString": "enum ZetaProto.Status"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Order",
+            "nodeType": "StructDefinition",
+            "scope": 179,
+            "src": "170:171:1",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 122,
+              "nodeType": "Block",
+              "src": "369:35:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 120,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 117,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 94,
+                      "src": "379:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 118,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 194,
+                        "src": "387:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 119,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "387:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "379:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 121,
+                  "nodeType": "ExpressionStatement",
+                  "src": "379:18:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 123,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 115,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "359:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 116,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "369:0:1"
+            },
+            "scope": 179,
+            "src": "347:57:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 127,
+            "name": "listed_orders",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "410:40:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+              "typeString": "mapping(address => struct ZetaProto.Order)"
+            },
+            "typeName": {
+              "id": 126,
+              "keyType": {
+                "id": 124,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "419:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "410:26:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                "typeString": "mapping(address => struct ZetaProto.Order)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 125,
+                "name": "Order",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 114,
+                "src": "430:5:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Order_$114_storage_ptr",
+                  "typeString": "struct ZetaProto.Order"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 177,
+              "nodeType": "Block",
+              "src": "548:292:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 139,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 136,
+                      "name": "maker",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 92,
+                      "src": "558:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 137,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 194,
+                        "src": "566:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 138,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "566:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "558:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 140,
+                  "nodeType": "ExpressionStatement",
+                  "src": "558:18:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 146,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 141,
+                          "name": "listed_orders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 127,
+                          "src": "586:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                            "typeString": "mapping(address => struct ZetaProto.Order storage ref)"
+                          }
+                        },
+                        "id": 143,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 142,
+                          "name": "maker",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 92,
+                          "src": "600:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "586:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Order_$114_storage",
+                          "typeString": "struct ZetaProto.Order storage ref"
+                        }
+                      },
+                      "id": 144,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenHave",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 103,
+                      "src": "586:30:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 145,
+                      "name": "_tokenHave",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 129,
+                      "src": "619:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "586:43:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 147,
+                  "nodeType": "ExpressionStatement",
+                  "src": "586:43:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 153,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 148,
+                          "name": "listed_orders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 127,
+                          "src": "639:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                            "typeString": "mapping(address => struct ZetaProto.Order storage ref)"
+                          }
+                        },
+                        "id": 150,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 149,
+                          "name": "maker",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 92,
+                          "src": "653:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "639:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Order_$114_storage",
+                          "typeString": "struct ZetaProto.Order storage ref"
+                        }
+                      },
+                      "id": 151,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenNeed",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 105,
+                      "src": "639:30:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 152,
+                      "name": "_tokenNeed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 131,
+                      "src": "672:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "639:43:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 154,
+                  "nodeType": "ExpressionStatement",
+                  "src": "639:43:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 160,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 155,
+                          "name": "listed_orders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 127,
+                          "src": "692:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                            "typeString": "mapping(address => struct ZetaProto.Order storage ref)"
+                          }
+                        },
+                        "id": 157,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 156,
+                          "name": "maker",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 92,
+                          "src": "706:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "692:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Order_$114_storage",
+                          "typeString": "struct ZetaProto.Order storage ref"
+                        }
+                      },
+                      "id": 158,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "quantity",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 107,
+                      "src": "692:29:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 159,
+                      "name": "_quantity",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 133,
+                      "src": "724:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "692:41:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 161,
+                  "nodeType": "ExpressionStatement",
+                  "src": "692:41:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 167,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 162,
+                          "name": "listed_orders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 127,
+                          "src": "743:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                            "typeString": "mapping(address => struct ZetaProto.Order storage ref)"
+                          }
+                        },
+                        "id": 164,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 163,
+                          "name": "maker",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 92,
+                          "src": "757:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "743:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Order_$114_storage",
+                          "typeString": "struct ZetaProto.Order storage ref"
+                        }
+                      },
+                      "id": 165,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "value",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 109,
+                      "src": "743:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 166,
+                      "name": "_quantity",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 133,
+                      "src": "772:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "743:38:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 168,
+                  "nodeType": "ExpressionStatement",
+                  "src": "743:38:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 175,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 169,
+                          "name": "listed_orders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 127,
+                          "src": "792:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                            "typeString": "mapping(address => struct ZetaProto.Order storage ref)"
+                          }
+                        },
+                        "id": 171,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 170,
+                          "name": "maker",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 92,
+                          "src": "806:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "792:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Order_$114_storage",
+                          "typeString": "struct ZetaProto.Order storage ref"
+                        }
+                      },
+                      "id": 172,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "status",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 113,
+                      "src": "792:27:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Status_$101",
+                        "typeString": "enum ZetaProto.Status"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 173,
+                        "name": "Status",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 101,
+                        "src": "822:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Status_$101_$",
+                          "typeString": "type(enum ZetaProto.Status)"
+                        }
+                      },
+                      "id": 174,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "open",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "822:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Status_$101",
+                        "typeString": "enum ZetaProto.Status"
+                      }
+                    },
+                    "src": "792:41:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$101",
+                      "typeString": "enum ZetaProto.Status"
+                    }
+                  },
+                  "id": 176,
+                  "nodeType": "ExpressionStatement",
+                  "src": "792:41:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 178,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "makeOrder",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 134,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 129,
+                  "name": "_tokenHave",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "476:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 128,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "476:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 131,
+                  "name": "_tokenNeed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "495:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 130,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "495:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 133,
+                  "name": "_quantity",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "514:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 132,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "514:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "475:57:1"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 135,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "548:0:1"
+            },
+            "scope": 179,
+            "src": "457:383:1",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 180,
+        "src": "26:816:1"
+      }
+    ],
+    "src": "0:842:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/suraj333/COINSHIP/contracts/ZetaProto.sol",
+    "exportedSymbols": {
+      "ZetaProto": [
+        179
+      ]
+    },
+    "id": 180,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 90,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 179,
+        "linearizedBaseContracts": [
+          179
+        ],
+        "name": "ZetaProto",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 92,
+            "name": "maker",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "56:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 91,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "56:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 94,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "75:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 93,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "75:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 96,
+            "name": "commission",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "94:18:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 95,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "94:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "ZetaProto.Status",
+            "id": 101,
+            "members": [
+              {
+                "id": 97,
+                "name": "open",
+                "nodeType": "EnumValue",
+                "src": "132:4:1"
+              },
+              {
+                "id": 98,
+                "name": "closed",
+                "nodeType": "EnumValue",
+                "src": "138:6:1"
+              },
+              {
+                "id": 99,
+                "name": "locked",
+                "nodeType": "EnumValue",
+                "src": "146:6:1"
+              },
+              {
+                "id": 100,
+                "name": "canceled",
+                "nodeType": "EnumValue",
+                "src": "154:8:1"
+              }
+            ],
+            "name": "Status",
+            "nodeType": "EnumDefinition",
+            "src": "119:45:1"
+          },
+          {
+            "canonicalName": "ZetaProto.Order",
+            "id": 114,
+            "members": [
+              {
+                "constant": false,
+                "id": 103,
+                "name": "tokenHave",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "193:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 102,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "193:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 105,
+                "name": "tokenNeed",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "219:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 104,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "219:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 107,
+                "name": "quantity",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "245:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 106,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 109,
+                "name": "value",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "271:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 108,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "271:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 111,
+                "name": "timestamp",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "294:17:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 110,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "294:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 113,
+                "name": "status",
+                "nodeType": "VariableDeclaration",
+                "scope": 114,
+                "src": "321:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Status_$101",
+                  "typeString": "enum ZetaProto.Status"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 112,
+                  "name": "Status",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 101,
+                  "src": "321:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Status_$101",
+                    "typeString": "enum ZetaProto.Status"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Order",
+            "nodeType": "StructDefinition",
+            "scope": 179,
+            "src": "170:171:1",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 122,
+              "nodeType": "Block",
+              "src": "369:35:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 120,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 117,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 94,
+                      "src": "379:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 118,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 194,
+                        "src": "387:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 119,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "387:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "379:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 121,
+                  "nodeType": "ExpressionStatement",
+                  "src": "379:18:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 123,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 115,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "359:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 116,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "369:0:1"
+            },
+            "scope": 179,
+            "src": "347:57:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 127,
+            "name": "listed_orders",
+            "nodeType": "VariableDeclaration",
+            "scope": 179,
+            "src": "410:40:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+              "typeString": "mapping(address => struct ZetaProto.Order)"
+            },
+            "typeName": {
+              "id": 126,
+              "keyType": {
+                "id": 124,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "419:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "410:26:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                "typeString": "mapping(address => struct ZetaProto.Order)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 125,
+                "name": "Order",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 114,
+                "src": "430:5:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Order_$114_storage_ptr",
+                  "typeString": "struct ZetaProto.Order"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 177,
+              "nodeType": "Block",
+              "src": "548:292:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 139,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 136,
+                      "name": "maker",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 92,
+                      "src": "558:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 137,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 194,
+                        "src": "566:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 138,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "566:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "558:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 140,
+                  "nodeType": "ExpressionStatement",
+                  "src": "558:18:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 146,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 141,
+                          "name": "listed_orders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 127,
+                          "src": "586:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                            "typeString": "mapping(address => struct ZetaProto.Order storage ref)"
+                          }
+                        },
+                        "id": 143,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 142,
+                          "name": "maker",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 92,
+                          "src": "600:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "586:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Order_$114_storage",
+                          "typeString": "struct ZetaProto.Order storage ref"
+                        }
+                      },
+                      "id": 144,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenHave",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 103,
+                      "src": "586:30:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 145,
+                      "name": "_tokenHave",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 129,
+                      "src": "619:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "586:43:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 147,
+                  "nodeType": "ExpressionStatement",
+                  "src": "586:43:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 153,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 148,
+                          "name": "listed_orders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 127,
+                          "src": "639:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                            "typeString": "mapping(address => struct ZetaProto.Order storage ref)"
+                          }
+                        },
+                        "id": 150,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 149,
+                          "name": "maker",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 92,
+                          "src": "653:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "639:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Order_$114_storage",
+                          "typeString": "struct ZetaProto.Order storage ref"
+                        }
+                      },
+                      "id": 151,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenNeed",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 105,
+                      "src": "639:30:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 152,
+                      "name": "_tokenNeed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 131,
+                      "src": "672:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "639:43:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 154,
+                  "nodeType": "ExpressionStatement",
+                  "src": "639:43:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 160,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 155,
+                          "name": "listed_orders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 127,
+                          "src": "692:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                            "typeString": "mapping(address => struct ZetaProto.Order storage ref)"
+                          }
+                        },
+                        "id": 157,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 156,
+                          "name": "maker",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 92,
+                          "src": "706:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "692:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Order_$114_storage",
+                          "typeString": "struct ZetaProto.Order storage ref"
+                        }
+                      },
+                      "id": 158,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "quantity",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 107,
+                      "src": "692:29:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 159,
+                      "name": "_quantity",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 133,
+                      "src": "724:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "692:41:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 161,
+                  "nodeType": "ExpressionStatement",
+                  "src": "692:41:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 167,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 162,
+                          "name": "listed_orders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 127,
+                          "src": "743:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                            "typeString": "mapping(address => struct ZetaProto.Order storage ref)"
+                          }
+                        },
+                        "id": 164,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 163,
+                          "name": "maker",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 92,
+                          "src": "757:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "743:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Order_$114_storage",
+                          "typeString": "struct ZetaProto.Order storage ref"
+                        }
+                      },
+                      "id": 165,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "value",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 109,
+                      "src": "743:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 166,
+                      "name": "_quantity",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 133,
+                      "src": "772:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "743:38:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 168,
+                  "nodeType": "ExpressionStatement",
+                  "src": "743:38:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 175,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 169,
+                          "name": "listed_orders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 127,
+                          "src": "792:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Order_$114_storage_$",
+                            "typeString": "mapping(address => struct ZetaProto.Order storage ref)"
+                          }
+                        },
+                        "id": 171,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 170,
+                          "name": "maker",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 92,
+                          "src": "806:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "792:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Order_$114_storage",
+                          "typeString": "struct ZetaProto.Order storage ref"
+                        }
+                      },
+                      "id": 172,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "status",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 113,
+                      "src": "792:27:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Status_$101",
+                        "typeString": "enum ZetaProto.Status"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 173,
+                        "name": "Status",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 101,
+                        "src": "822:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Status_$101_$",
+                          "typeString": "type(enum ZetaProto.Status)"
+                        }
+                      },
+                      "id": 174,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "open",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "822:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Status_$101",
+                        "typeString": "enum ZetaProto.Status"
+                      }
+                    },
+                    "src": "792:41:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$101",
+                      "typeString": "enum ZetaProto.Status"
+                    }
+                  },
+                  "id": 176,
+                  "nodeType": "ExpressionStatement",
+                  "src": "792:41:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 178,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "makeOrder",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 134,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 129,
+                  "name": "_tokenHave",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "476:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 128,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "476:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 131,
+                  "name": "_tokenNeed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "495:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 130,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "495:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 133,
+                  "name": "_quantity",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "514:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 132,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "514:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "475:57:1"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 135,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "548:0:1"
+            },
+            "scope": 179,
+            "src": "457:383:1",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 180,
+        "src": "26:816:1"
+      }
+    ],
+    "src": "0:842:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {
+    "5750": {
+      "events": {},
+      "links": {},
+      "address": "0xc12a5c2fd6e6809630e8f98c4d0934791f402050",
+      "transactionHash": "0x28b4fb724a6d27f7c000d616840eab57f6ceef73eabccdc27529c35234308cbf"
+    }
+  },
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-10-01T16:37:41.122Z"
+}
