@@ -3,7 +3,7 @@ import "./CoshToken.sol";
 
 contract CoshBTC {
     string  public name = "CoshBTC";
-    bytes32 symbol = "0xC";
+    string  public symbol = "C_BTC";
     string  public standard = "CoshBTC v1.0";
     uint256 public totalSupply;
     CoshToken public CT;
@@ -19,21 +19,23 @@ contract CoshBTC {
         address indexed _spender,
         uint256 _value
     );
-    mapping(address => uint256) public balanceOf;
+    mapping(address => mapping(address => uint256)) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
 
     constructor (uint256 _initialSupply, address addr) public {
-        balanceOf[msg.sender] = _initialSupply;
-        totalSupply = _initialSupply;
         CT = CoshToken(addr);
-        CT.setNativeTokens(name, _initialSupply);
+        if(CT.getTokens(name))
+            revert();
+        balanceOf[msg.sender][address(this)] = _initialSupply;
+        totalSupply = _initialSupply;
+        CT.setNativeTokens(address(this), name, _initialSupply);
     }
 
     function transfer(address _to, uint256 _value) public returns (bool success) {
-        require(balanceOf[msg.sender] >= _value);
+        require(balanceOf[msg.sender][address(this)] >= _value);
 
-        balanceOf[msg.sender] -= _value;
-        balanceOf[_to] += _value;
+        balanceOf[msg.sender][address(this)] -= _value;
+        balanceOf[_to][address(this)] += _value;
 
         emit Transfer(msg.sender, _to, _value);
 
@@ -49,11 +51,11 @@ contract CoshBTC {
     }
 
     function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
-        require(_value <= balanceOf[_from]);
+        require(_value <= balanceOf[_from][address(this)]);
         require(_value <= allowance[_from][msg.sender]);
 
-        balanceOf[_from] -= _value;
-        balanceOf[_to] += _value;
+        balanceOf[_from][address(this)] -= _value;
+        balanceOf[_to][address(this)] += _value;
 
         allowance[_from][msg.sender] -= _value;
 

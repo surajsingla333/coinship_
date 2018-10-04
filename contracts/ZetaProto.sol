@@ -1,4 +1,5 @@
 pragma solidity ^0.4.25;
+import "./CoshToken.sol";
 
 contract ZetaProto {
     
@@ -9,6 +10,9 @@ contract ZetaProto {
     uint256 public commission;
     uint256 public upperPrice;
     uint256 public lowerPrice;
+    CoshToken public CT;
+    mapping(address => mapping(address => uint256)) public balanceOf;
+    address tokensTake;
 
     enum Status {open, closed, locked, canceled }
 
@@ -21,8 +25,9 @@ contract ZetaProto {
         Status status;
     }
 
-    constructor () public {
+    constructor (address addr) public {
         owner = msg.sender;
+        CT = CoshToken(addr);
     }
     
     modifier isOwner() {
@@ -55,6 +60,7 @@ contract ZetaProto {
     mapping (address => bool) public confirmation;
 
     function makeOrder(string _currencyName, string _toCosh, string _currencyAddress, uint256 _quantity) public {
+        require(CT.getTokens(_toCosh));
         maker = msg.sender;
         value = _quantity;
         getCommission();
@@ -73,15 +79,18 @@ contract ZetaProto {
         delete listed_orders[maker];
     }
     
-    function take(string _name) public payable {
-        
+    function take(string _name) public {
+        tokensTake = CT.getAdd(_name);
         /* This will be called by the taker who wants to exchange his cosh currency to native currency*/
-
-        require(uint256(msg.value) == listed_orders[maker].quantity && 
-        keccak256(_name) == keccak256(listed_orders[maker].toCosh));
+        require(CT.getTokens(_name) && balanceOf[msg.sender][tokensTake] >= listed_orders[maker].quantity && 
+                keccak256(_name) == keccak256(listed_orders[maker].toCosh));
         // check if the taker has the sufficient balance and the required cosh token.
         taker = msg.sender;
+        
         listed_orders[maker].status = Status.locked; // change status of the order
+        
+        balanceOf[msg.sender][tokensTake] -= listed_orders[maker].quantity;
+        balanceOf[address(this)][tokensTake] += listed_orders[maker].quantity;
     }
         
     function confirmTransaction(bool res) public {
@@ -96,8 +105,10 @@ contract ZetaProto {
         // this function can be called by any party to commence the exchange of tokens
         /* checks if both the parties are sastified and the taker received the native currency*/
         if(confirmation[maker] == true && confirmation[taker] == true) {
-            maker.transfer(value-((commission*value)/100)); // tokens are tranfered from contract to maker
-            owner.transfer((commission*value)/100); // tokens commission tranfered to owner.
+            
+            balanceOf[maker][tokensTake] += value-((commission*value)/100);// tokens are tranfered from contract to maker
+            balanceOf[owner][tokensTake] += ((commission*value)/100); // tokens commission tranfered to owner.
+            
             listed_orders[maker].status = Status.closed;
             completed_orders[maker] = listed_orders[maker];
             delete listed_orders[maker];

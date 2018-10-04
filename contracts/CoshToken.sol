@@ -7,8 +7,10 @@ contract CoshToken {
     uint256 public totalSupply;
     address public owner;
     uint256 public i;
+    address public cont;
     
     struct nativeTokens {
+        address add;
         string name;
         uint256 amount;
     }
@@ -20,7 +22,8 @@ contract CoshToken {
         _;
     }
     
-    function setNativeTokens(string _name, uint256 _initialSupply) public {
+    function setNativeTokens(address _add, string _name, uint256 _initialSupply) public {
+        tokens[i].add = _add;
         tokens[i].name = _name;
         tokens[i].amount = _initialSupply;
         i++;
@@ -39,6 +42,19 @@ contract CoshToken {
         return false;
     }
     
+    function getAdd(string _name) returns (address){
+        uint256 j=1;
+        while(keccak256(tokens[j].name) != keccak256("")){
+            if(keccak256(_name) == keccak256(tokens[j].name))
+                return tokens[j].add;
+            else {
+                j++;
+                continue;
+            }
+        }
+        revert();
+    }
+    
     event Transfer(
         address indexed _from,
         address indexed _to,
@@ -51,21 +67,22 @@ contract CoshToken {
         uint256 _value
     );
 
-    mapping(address => uint256) public balanceOf;
+    mapping(address => mapping(address => uint256)) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
 
     constructor (uint256 _initialSupply) public {
-        balanceOf[msg.sender] = _initialSupply;
+        balanceOf[msg.sender][address(this)] = _initialSupply;
         totalSupply = _initialSupply;
         owner = msg.sender;
+        cont = address(this);
         i=1;
     }
 
     function transfer(address _to, uint256 _value) public returns (bool success) {
-        require(balanceOf[msg.sender] >= _value);
+        require(balanceOf[msg.sender][address(this)] >= _value);
 
-        balanceOf[msg.sender] -= _value;
-        balanceOf[_to] += _value;
+        balanceOf[msg.sender][address(this)] -= _value;
+        balanceOf[_to][address(this)] += _value;
 
         emit Transfer(msg.sender, _to, _value);
 
@@ -81,11 +98,11 @@ contract CoshToken {
     }
 
     function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
-        require(_value <= balanceOf[_from]);
+        require(_value <= balanceOf[_from][address(this)]);
         require(_value <= allowance[_from][msg.sender]);
 
-        balanceOf[_from] -= _value;
-        balanceOf[_to] += _value;
+        balanceOf[_from][address(this)] -= _value;
+        balanceOf[_to][address(this)] += _value;
 
         allowance[_from][msg.sender] -= _value;
 
