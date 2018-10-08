@@ -1,113 +1,53 @@
+// original ERC20 token of coinship
+/* Cosh Token */
+
 pragma solidity ^0.4.25;
+import "./Tokens.sol";
 
 contract CoshToken {
-    string  public name = "Cosh Token";
-    string  public symbol = "COSH";
-    string  public standard = "Cosh Token v1.0";
-    uint256 public totalSupply;
-    address public owner;
-    uint256 public i;
-    address public cont;
+    string  public name = "Cosh Token"; //name of the token
+    string  public symbol = "COSH"; // symbol of the token
+    string  public standard = "Cosh Token v1.0"; // standard of token
+    uint256 public totalSupply; // stores total number of tokens
+    Tokens public CT; // get the Token.sol instance
     
-    struct nativeTokens {
-        address add;
-        string name;
-        uint256 amount;
-    }
-    
-    mapping (uint256 => nativeTokens) public tokens;
-    
-    modifier isOwner() {
-        require(msg.sender == owner);
-        _;
-    }
-    
-    function setNativeTokens(address _add, string _name, uint256 _initialSupply) public {
-        tokens[i].add = _add;
-        tokens[i].name = _name;
-        tokens[i].amount = _initialSupply;
-        i++;
-    }
-    
-    function getTokens(string _name) public view returns (bool){
-        uint256 j=1;
-        while(keccak256(tokens[j].name) != keccak256("")){
-            if(keccak256(_name) == keccak256(tokens[j].name))
-                return true;
-            else {
-                j++;
-                continue;
-            }
-        }
-        return false;
-    }
-    
-    function getAdd(string _name) returns (address){
-        uint256 j=1;
-        while(keccak256(tokens[j].name) != keccak256("")){
-            if(keccak256(_name) == keccak256(tokens[j].name))
-                return tokens[j].add;
-            else {
-                j++;
-                continue;
-            }
-        }
-        revert();
-    }
-    
-    event Transfer(
-        address indexed _from,
-        address indexed _to,
-        uint256 _value
-    );
-
-    event Approval(
-        address indexed _owner,
-        address indexed _spender,
-        uint256 _value
-    );
-
-    mapping(address => mapping(address => uint256)) public balanceOf;
-    mapping(address => mapping(address => uint256)) public allowance;
-
-    constructor (uint256 _initialSupply) public {
-        balanceOf[msg.sender][address(this)] = _initialSupply;
+    /* creates the contract with initialSupply and address of Tokens contract*/
+    constructor (uint256 _initialSupply, address addr) public {
+        CT = Tokens(addr); // stores the Token instance in CT
+        
+        if(CT.getTokens(name))  // ensures that the contract in created only once
+            revert();
+        
+        // sets the initialSupply(also the total supply) to the msg.sender(who creates the contract)    
+        CT.setBalance(msg.sender, address(this), _initialSupply); 
+        
         totalSupply = _initialSupply;
-        owner = msg.sender;
-        cont = address(this);
-        i=1;
+        
+        // sets the token in Native tokens mapping
+        CT.setNativeTokens(address(this), name, "Cosh Token", _initialSupply);
+    }
+    
+    /* basic erc20 function which transfer funds (tokens) from msg.sender
+        to the address which is given. */
+    function transfer(address _to, uint256 _value) public payable returns(bool){
+        address _from = msg.sender;
+        bool suc =CT.transferTokens(_from, _to, _value);
+        return suc;
+    }
+    
+    /* basic erc20 function which approve  _spender to transfer
+        funds (tokens) from msg.sender's account. */
+    function approve(address _spender, uint256 _value) public returns (bool) {
+        address _approver = msg.sender;
+        bool suc = CT.approve(_approver, _spender, _value);
+        return suc;
     }
 
-    function transfer(address _to, uint256 _value) public returns (bool success) {
-        require(balanceOf[msg.sender][address(this)] >= _value);
-
-        balanceOf[msg.sender][address(this)] -= _value;
-        balanceOf[_to][address(this)] += _value;
-
-        emit Transfer(msg.sender, _to, _value);
-
-        return true;
-    }
-
-    function approve(address _spender, uint256 _value) public returns (bool success) {
-        allowance[msg.sender][_spender] = _value;
-
-        emit Approval(msg.sender, _spender, _value);
-
-        return true;
-    }
-
-    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
-        require(_value <= balanceOf[_from][address(this)]);
-        require(_value <= allowance[_from][msg.sender]);
-
-        balanceOf[_from][address(this)] -= _value;
-        balanceOf[_to][address(this)] += _value;
-
-        allowance[_from][msg.sender] -= _value;
-
-        emit Transfer(_from, _to, _value);
-
-        return true;
+    /* basic erc20 function which transfer funds (tokens) from _from account
+        to the address which is given. */
+    function transferFrom(address _from, address _to, uint256 _value) public payable returns (bool) {
+        address _requester = msg.sender;
+        bool suc = CT.transferFrom(_requester, _from, _to, _value);
+        return suc;
     }
 }
