@@ -1,5 +1,7 @@
 // This contract carries out the zeta protocol to exchange native currency with cosh tokens
-/* Zeta Protocol */
+/* Zeta Protocol     
+
+    @author: Suraj singla */
 
 pragma solidity ^0.4.25;
 import "./Tokens.sol";

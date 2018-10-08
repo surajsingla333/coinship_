@@ -1,7 +1,10 @@
 // erc20 token which will be used to exchange BTC with other crypto currencies
-/* CoshBTC */
 // 1 CoshBTC = 1 BTC
+/* CoshBTC  
 
+    @author: Suraj singla */
+
+    
 pragma solidity ^0.4.25 ;
 import "./Tokens.sol";
 

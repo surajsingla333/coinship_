@@ -1,5 +1,7 @@
 // original ERC20 token of coinship
-/* Cosh Token */
+/* Cosh Token   
+
+    @author: Suraj singla  */
 
 pragma solidity ^0.4.25;
 import "./Tokens.sol";

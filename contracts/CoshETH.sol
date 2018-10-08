@@ -1,6 +1,9 @@
 // erc20 token which will be used to exchange ETH with other crypto currencies
-/* CoshETH */
 // 1 CoshETH = 1 ETH
+/* CoshETH   
+
+    @author: Suraj singla */
+
 
 pragma solidity ^0.4.25 ;
 import "./Tokens.sol";

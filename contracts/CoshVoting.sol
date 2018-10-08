@@ -1,3 +1,6 @@
+/*   
+
+    @author: Suraj singla */
 pragma solidity ^0.4.25;
 
 contract CoshVote {

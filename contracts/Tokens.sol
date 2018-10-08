@@ -1,4 +1,7 @@
 // this is basic erc20 tokens and all tokens will implement its functionality
+/* Tokens   
+
+    @author: Suraj singla */
 
 pragma solidity ^0.4.25;
 
