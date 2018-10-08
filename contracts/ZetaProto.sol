@@ -79,7 +79,8 @@ contract ZetaProto {
     mapping (address => bool) public confirmed;
 
     // called by user who wants cosh tokens and has native currency
-    function makeOrder(string _currencyName, string _currencyWalletAddress, uint256 _quantity) public returns(uint256 commissionthis, uint256 commissionValue, bool res){
+    function makeOrder(string _currencyName, string _currencyWalletAddress, uint256 _quantity) public 
+        returns(uint256 commissionthis, uint256 commissionValue, bool res, bytes32 ordernumber, uint256 z){
         
         require(CT.getCurrency(_currencyName)); 
         // checks if the currency which user inputted is available for exchange or not
@@ -99,8 +100,8 @@ contract ZetaProto {
         
         uint256 comVal = ((_quantity/100)*com);
         //  get the amount of commission of this order
-        
-        return (com, comVal, true); 
+        i++;
+        return (com, comVal, true, order_id, i); 
     }
     
     /* this is called by the maker to cancel the order*/

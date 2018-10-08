@@ -2,12 +2,12 @@
 /* Tokens   
 
     @author: Suraj singla */
-
+    
 pragma solidity ^0.4.25;
 
 contract Tokens {
     address public owner; // owner of this contract
-    uint256 i;   
+    uint256 public i;   
     address public cont; // this contract address
     
     struct nativeTokens {
@@ -34,18 +34,21 @@ contract Tokens {
         tokens[i].amount = _initialSupply;
         i++;
     }
-    
+    event jV (uint256);
     // checks if the given string is a native cosh token or not
     function getTokens(string _name) public view returns (bool){
         uint256 j=1;
         while(keccak256(tokens[j].name) != keccak256("")){
-            if(keccak256(_name) == keccak256(tokens[j].name))
+            if(keccak256(_name) == keccak256(tokens[j].name)) {
+                emit jV(j);
                 return true;
+            }
             else {
                 j++;
                 continue;
             }
         }
+        emit jV(j);
         return false;
     }
     
@@ -64,7 +67,7 @@ contract Tokens {
     }
     
     // get contract address of the native cosh token
-    function getAdd(string _name) returns (address){
+    function getAdd(string _name) public view returns (address){
         uint256 j=1;
         while(keccak256(tokens[j].name) != keccak256("")){
             if(keccak256(_name) == keccak256(tokens[j].name))
@@ -78,7 +81,7 @@ contract Tokens {
     }
     
     // returns the native currency with which the token will exchange to.
-    function getTokenForCurrency(string _name) returns(string){
+    function getTokenForCurrency(string _name) public view returns(string){
         uint256 j=1;
         while(keccak256(tokens[j].nativeCurrency) != keccak256("")){
             if(keccak256(_name) == keccak256(tokens[j].nativeCurrency))

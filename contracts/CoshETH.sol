@@ -4,12 +4,11 @@
 
     @author: Suraj singla */
 
-
 pragma solidity ^0.4.25 ;
 import "./Tokens.sol";
 
 contract CoshETH {
-    string  public name = "CoshETH "; //name of the token
+    string  public name = "CoshETH"; //name of the token
     string  public symbol = "C_ETH"; // symbol of the token
     string  public standard = "CoshETH v1.0"; // standard of token
     uint256 public totalSupply; // stores total number of tokens

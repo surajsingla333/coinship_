@@ -39,7 +39,8 @@ contract EtaProto {
     mapping (bytes32 => Order) public completed_orders;
     
     // called by user who wants to exchange the token
-    function makeOrder(string _tokenHave, string _tokenNeed, uint256 _quantity) public payable returns(bool){
+    function makeOrder(string _tokenHave, string _tokenNeed, uint256 _quantity) public payable 
+        returns(bool res, bytes32 orderNumber){
         
         require(CT.getTokens(_tokenHave) && CT.getTokens(_tokenNeed));
         // checks if the tokens which user mentiond are available or not
@@ -64,9 +65,9 @@ contract EtaProto {
         listed_orders[order_id].timestamp = now ;
         listed_orders[order_id].status = Status.open;
         
-        bool suc = CT.transferProto(msg.sender, tokensHave,  _quantity);
+        bool suc = CT.transferProto(msg.sender, tokensHave, _quantity);
         i++;
-        return suc;
+        return (suc, order_id);
     }
     
     // This function cancels the listed order.
@@ -93,7 +94,7 @@ contract EtaProto {
     function take(bytes32 id) public payable{
         
         address tokensGive = CT.getAdd(listed_orders[id].tokenNeed);
-        uint256 bal = CT.getBalance(msg.sender, tokensTake);
+        uint256 bal = CT.getBalance(msg.sender, tokensGive);
         // above to lines get the contract address of the token which maker need and 
         // then gets the balance of the msg.sender for that token
         
