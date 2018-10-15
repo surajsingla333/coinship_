@@ -1,5 +1,5 @@
 // This contract carries out the eta protocol to exchange cosh tokens
-/* Zeta Protocol 
+/* Eta Protocol 
 
     @author: Suraj singla */
 

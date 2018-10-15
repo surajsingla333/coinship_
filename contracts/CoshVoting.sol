@@ -11,9 +11,11 @@ contract CoshVote {
     mapping (address => bool) voted; // keeps check on who has voted
     mapping (address => uint) weight; // keeps the weight count associated to an address
     mapping (address => bool) voteType; // keeps check of the type of vote.
+    event CallVoting(string description, string txID, string fromWallet, string toWallet);
 
-    constructor() {
+    constructor(string _txID, string _from, string _to) {
         owner = msg.sender;
+        emit CallVoting("Check the transaction", _txID, _from, _to);
     }
     modifier isOwner{
         msg.sender == owner;

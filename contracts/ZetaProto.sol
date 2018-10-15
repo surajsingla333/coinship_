@@ -5,6 +5,7 @@
 
 pragma solidity ^0.4.25;
 import "./Tokens.sol";
+import "./CoshVoting.sol";
 
 contract ZetaProto {
     
@@ -18,6 +19,9 @@ contract ZetaProto {
     // user defined datatype to chech order Status
     enum Status {open, closed, locked, canceled}
 
+    // event that tells completion of exchange
+    event Exchange(string description);
+    
     // Order details
     struct Order {
         address maker;  // address of the user who made the request (have native currency and wants cosh tokens)
@@ -151,7 +155,7 @@ contract ZetaProto {
     
     /*this function is called by both, maker and taker to confirm 
         that the maker has sent the native currency to taker. */
-    function confirmTransaction(bool res, bytes32 id) public returns(bool) {
+    function confirmTransaction(bool res, bytes32 id, string _transId) public returns(bool) {
         
         require(msg.sender == listed_orders[id].maker || msg.sender == listed_orders[id].taker);
         // checks if the msg.sender are maker or taker only
@@ -163,7 +167,7 @@ contract ZetaProto {
         // this confirms that both have confirmed by their sides
         
         if(confirmed[listed_orders[id].maker] && confirmed[listed_orders[id].taker])
-           bool suc =  transact(id);
+           bool suc =  transact(id, _transId);
            
         emit Tran(confirmed[listed_orders[id].maker], confirmed[listed_orders[id].taker], confirmation[listed_orders[id].maker], confirmation[listed_orders[id].taker], suc);
         
@@ -172,14 +176,13 @@ contract ZetaProto {
     
     /* this function is automatically called when both (maker and taker) 
         confirms the transaction*/
-    function transact(bytes32 id) private returns(bool){
+    function transact(bytes32 id, string _transactionId) private returns(bool){
 
+        // address of the contract which has the equivalent CoshToken of the mentioned native currency.
+        address tokensHave = CT.getAdd(CT.getTokenForCurrency(listed_orders[id].currencyName));
+        
         if(confirmation[listed_orders[id].maker] && confirmation[listed_orders[id].taker] ) {
         /* checks if both the parties are sastified and the taker received the native currency*/
-            
-            // string storage tokenHave = CT.getTokenForCurrency(listed_orders[id].currencyName);
-            /* This will be called by the taker who wants to exchange his cosh currency to native currency*/
-            address tokensHave = CT.getAdd(CT.getTokenForCurrency(listed_orders[id].currencyName));
             
             uint256 com = getCommission(id);
             uint256 value = listed_orders[id].quantity;
@@ -198,11 +201,45 @@ contract ZetaProto {
             delete confirmed[listed_orders[id].taker];
             // above lines cnages the order status and send it to completed order
             
+            emit Exchange("Exchange completed as both confirmed the transaction."); 
+            
             return true;
+        }
+        else if(!confirmation[listed_orders[id].maker] && !confirmation[listed_orders[id].taker]) {
+        /* checks if both the parties are not sastified(false) */
+    
+            CT.transferProtoEx(address(this), tokensHave, listed_orders[id].taker, listed_orders[id].quantity); 
+            // this will transfer the cosh tokens back to the taker wallet
+            
+            listed_orders[id].status = Status.closed;
+            completed_orders[id] = listed_orders[id];
+            delete listed_orders[id];
+            delete confirmed[listed_orders[id].maker];
+            delete confirmed[listed_orders[id].taker];
+            // above lines cnages the order status and send it to completed order
+            
+            emit Exchange("Exchange reverted and tokens are sent back to taker as both confirmed that no transaction happened.");
+            
+            return true;
+            
         }
         else {
             /* if there is any false claims by any of the party, Cosh Voting is done to find the culprit.*/
             //CoshVoting.numberOfVotes();
+            CoshVote voting = new CoshVote(_transactionId, listed_orders[id].makerAddress, listed_orders[id].takerAddress);
+            
+            CT.transferProtoEx(address(this), tokensHave, listed_orders[id].taker, listed_orders[id].quantity); 
+            // this will transfer the cosh tokens back to the taker wallet
+            
+            listed_orders[id].status = Status.canceled;
+            completed_orders[id] = listed_orders[id];
+            delete listed_orders[id];
+            delete confirmed[listed_orders[id].maker];
+            delete confirmed[listed_orders[id].taker];
+            // above lines cnages the order status and send it to completed order
+            
+            emit Exchange("Exchange not done due to falsy claims and thus reverted.");
+
             return false;
         }
     }
